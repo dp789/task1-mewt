@@ -51,7 +51,7 @@ const ProductCard = ({ item }) => {
         <span className="product-catagory">{item.brand}</span>
         <p>{item.name}</p>
         <div className="product-bottom-details">
-          <div className="product-price">${item.price}</div>
+          <div className="product-price">₹{item.price}</div>
           <div className="product-price">Size:{item.size}</div>
         </div>
 

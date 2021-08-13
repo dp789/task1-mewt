@@ -3,6 +3,7 @@ import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
@@ -136,6 +137,10 @@ const Header = () => {
       </div>
       <div className="modal"></div>
       <Modal open={open} handleClose={() => setOpen(false)} />
+      <div style={{display:"flex",color:"white",flexDirection:"row"}}>
+          <LocationOnOutlinedIcon style={{padding:"10" }}/>
+          <p style={{paddingBottom:9,fontSize:"1rem"}}>Location</p>
+      </div>
     </div>
   );
 };
