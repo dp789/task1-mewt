@@ -20,6 +20,7 @@ const Header = () => {
   const [show, setShow] = useState(true);
   const [searchTerm , setSearchTerm]=useState('');
 
+// Login component
   useEffect(() => {
     const showvalue = setTimeout(() => {
       setShow(false);
@@ -53,7 +54,8 @@ const Header = () => {
       </>
     );
   };
-
+ 
+  //Header component
   return (
     <div className="header">
       <div className="first">

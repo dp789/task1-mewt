@@ -13,6 +13,7 @@ const savedList = [];
 
 export const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, {
+    sortType: null,
     cartlist,
     savedList,
     productList
@@ -54,7 +55,8 @@ export const ProductProvider = ({ children }) => {
         addToSaved,
         increment,
         decrement,
-        dispatch
+        dispatch,
+        sortType: state.sortType,
       }}
     >
       {children}
@@ -86,6 +88,16 @@ const reducer = (state, action) => {
         )
       };
 
+      case "PRICE_HIGH_TO_LOW":
+            return {
+                ...state,
+                sortType: action.payload
+            };
+      case "PRICE_LOW_TO_HIGH":
+              return {
+                  ...state,
+                  sortType: action.payload
+              };
     case "REMOVE_FROM_SAVED":
       console.log(action.payload.item);
       return {

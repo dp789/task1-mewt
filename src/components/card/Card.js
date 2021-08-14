@@ -14,9 +14,10 @@ const Card = () => {
           justifyContent: "space-around"
         }}
       >
+        {/* mapping items to render on screen */}
         {state.productList.map((item) => {
           return <ProductCard item={item} key={item._id} />;
-        })}
+         })}
       </div>
     </>
   );
