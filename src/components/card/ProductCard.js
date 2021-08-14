@@ -45,7 +45,7 @@ const ProductCard = ({ item }) => {
     <div className="product-card" style={{ margin: "20px" }}>
       <div className="badge">{item.idealFor}</div>
       <div className="product-tumb">
-        <img src={item.image} alt="" />
+          <img src={item.image} alt="" />
       </div>
       <div className="product-details">
         <span className="product-catagory">{item.brand}</span>

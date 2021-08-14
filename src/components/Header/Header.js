@@ -18,6 +18,7 @@ const Header = () => {
   const history = useHistory();
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(true);
+  const [searchTerm , setSearchTerm]=useState('');
 
   useEffect(() => {
     const showvalue = setTimeout(() => {
@@ -91,7 +92,9 @@ const Header = () => {
         </div>
       </div>
       <div className="second">
-        <input type="text" placeholder="Search for products,brands and more" />
+        <input type="text"
+         onChange={(event) => {setSearchTerm(event.target.value)}}
+         placeholder="Search for products,brands and more" />
         <SearchIcon />
       </div>
       <div className="third">
@@ -133,7 +136,7 @@ const Header = () => {
       </div>
       <div onClick={() => history.push("/cart")} className="fifth">
         <ShoppingCartIcon style={{color:"white"}}/>
-        <p style={{ color: "white", fontWeight: "600" }}>Cart</p>
+        <p style={{ color: "white", fontWeight: "600" , cursor:"pointer" }}>Cart</p>
       </div>
       <div className="modal"></div>
       <Modal open={open} handleClose={() => setOpen(false)} />
