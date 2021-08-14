@@ -93,7 +93,7 @@ const Header = () => {
       </div>
       <div className="second">
         <input type="text"
-         onChange={(event) => {setSearchTerm(event.target.value)}}
+         onChange={event => {setSearchTerm(event.target.value)}}
          placeholder="Search for products,brands and more" />
         <SearchIcon />
       </div>
